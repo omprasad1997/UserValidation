@@ -18,4 +18,19 @@ public class UserValidatorTest {
         Assertions.assertFalse(firstName);
     }
 
+    @Test
+    public void givenLastName_WhenProper_ShouldReturntrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean lastName = userValidator.validLastName("Rathod");
+        Assertions.assertTrue(lastName);
+    }
+
+    @Test
+    public void givenLastName_WhenNotProper_ShouldReturntrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean lastName = userValidator.validLastName("rathod");
+        Assertions.assertFalse(lastName);
+    }
+
+
 }
