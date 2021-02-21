@@ -26,11 +26,26 @@ public class UserValidatorTest {
     }
 
     @Test
-    public void givenLastName_WhenNotProper_ShouldReturntrue() {
+    public void givenLastName_WhenNotProper_ShouldReturnfalse() {
         UserValidator userValidator = new UserValidator();
         boolean lastName = userValidator.validLastName("rathod");
         Assertions.assertFalse(lastName);
     }
+
+    @Test
+    public void givenEmailAddress_WhenProper_ShouldReturntrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean emailAddress = userValidator.validEmailAddress("abc@yahoo.com");
+        Assertions.assertTrue(emailAddress);
+    }
+
+    @Test
+    public void givenEmailAddress_WhenNotProper_ShouldReturnfalse() {
+        UserValidator userValidator = new UserValidator();
+        boolean emailAddress = userValidator.validEmailAddress("abc@.com.au");
+        Assertions.assertTrue(emailAddress);
+    }
+    
 
 
 }
