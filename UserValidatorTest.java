@@ -56,7 +56,7 @@ public class UserValidatorTest {
     @Test
     public void givenPhoneNumber_WhenNotProper_ShouldReturnfalse() {
         UserValidator userValidator = new UserValidator();
-        boolean phoneNumber = userValidator.validEmailAddress("916849756812");
+        boolean phoneNumber = userValidator.validEmailAddress("916849746812");
         Assertions.assertFalse(phoneNumber);
     }
 
