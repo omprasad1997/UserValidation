@@ -6,11 +6,6 @@ import org.junit.jupiter.api.Test;
 public class UserValidatorTest {
 
     @Test
-    public void welcome() {
-        System.out.println("Welcome");
-    }
-
-    @Test
     public void givenFirstName_WhenProper_ShouldReturntrue() {
         UserValidator userValidator = new UserValidator();
         boolean firstName = userValidator.validFirstName("Omprasad");
