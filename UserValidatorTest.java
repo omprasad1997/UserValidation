@@ -45,4 +45,18 @@ public class UserValidatorTest {
         boolean emailAddress = userValidator.validEmailAddress("abc@.com.au");
         Assertions.assertTrue(emailAddress);
     }
+
+    @Test
+    public void givenPhoneNumber_WhenProper_ShouldReturntrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean phoneNumber = userValidator.validEmailAddress("91 6849756812");
+        Assertions.assertTrue(phoneNumber);
+    }
+
+    @Test
+    public void givenPhoneNumber_WhenNotProper_ShouldReturnfalse() {
+        UserValidator userValidator = new UserValidator();
+        boolean phoneNumber = userValidator.validEmailAddress("916849756812");
+        Assertions.assertFalse(phoneNumber);
+    }
 }
