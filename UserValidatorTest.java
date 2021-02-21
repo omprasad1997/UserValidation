@@ -45,7 +45,4 @@ public class UserValidatorTest {
         boolean emailAddress = userValidator.validEmailAddress("abc@.com.au");
         Assertions.assertTrue(emailAddress);
     }
-    
-
-
 }
