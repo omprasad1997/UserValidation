@@ -59,4 +59,18 @@ public class UserValidatorTest {
         boolean phoneNumber = userValidator.validEmailAddress("916849756812");
         Assertions.assertFalse(phoneNumber);
     }
+
+    @Test
+    public void givenPassword_WhenProper_ShouldReturntrue() {
+        UserValidator userValidator = new UserValidator();
+        boolean password = userValidator.validPassword("Omprasad@123");
+        Assertions.assertEquals(true,password);
+    }
+
+    @Test
+    public void givenPassword_WhenNotProper_ShouldReturnfalse() {
+        UserValidator userValidator = new UserValidator();
+        boolean password = userValidator.validPassword("Omprasad");
+        Assertions.assertEquals(false,password);
+    }
 }
